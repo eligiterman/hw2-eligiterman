@@ -161,154 +161,187 @@ actor = Actor.new
 actor["name"] = "Anne Hathaway"
 actor.save
 
-# # Query to find the Batman Begins movie
-# bb = Movie.find_by({"title" => "Batman Begins"})
+# Query to find the Batman Begins movie
+bb = Movie.find_by({"title" => "Batman Begins"})
 
-# # Query to find the Actor Christian Bale 
-# cb = Actor.find_by({"name" => "Christian Bale"})
+# Query to find the Actor Christian Bale 
+cb = Actor.find_by({"name" => "Christian Bale"})
 
-# role = Role.new
-# role["movie_id"] = bb["movie_id"]
-# role["actor_id"] = cb["actorr_id"]
-# role["character_name"] = "Bruce Wayne"
-# role.save
+role = Role.new
+role["movie_id"] = bb["id"]
+role["actor_id"] = cb["id"]
+role["character_name"] = "Bruce Wayne"
+role.save
 
-# movie = Movie.find_by(title: "Batman Begins")
-# actor = Actor.find_by(name: "Michael Caine")
-# role = Role.new
-# role.movie_id = movie.id
-# role.actor_id = actor.id
-# role["character_name"] = "Alfred"
-# role.save
+# Query to find the Actor Michael Caine 
+mc = Actor.find_by({"name" => "Michael Caine"})
 
-# movie = Movie.find_by(title: "Batman Begins")
-# actor = Actor.find_by(name: "Liam Neeson")
-# role = Role.new
-# role.movie_id = movie.id
-# role.actor_id = actor.id
-# role["character_name"] = "Ra's Al Ghul"
-# role.save
+role = Role.new
+role["movie_id"] = bb["id"]
+role["actor_id"] = mc["id"]
+role["character_name"] = "Alfred"
+role.save
 
-# movie = Movie.find_by(title: "Batman Begins")
-# actor = Actor.find_by(name: "Katie Holmes")
-# role = Role.new
-# role.movie_id = movie.id
-# role.actor_id = actor.id
-# role["character_name"] = "Rachel Dawes"
-# role.save
+#Query to find the actor Liam Neeson
+ln = Actor.find_by({"name" => "Liam Neeson"})
 
-# movie = Movie.find_by(title: "Batman Begins")
-# actor = Actor.find_by(name: "Gary Oldman")
-# role = Role.new
-# role.movie_id = movie.id
-# role.actor_id = actor.id
-# role["character_name"] = "Commissioner Gordon"
-# role.save
+role = Role.new
+role["movie_id"] = bb["id"]
+role["actor_id"] = ln["id"]
+role["character_name"] = "Ra's Al Ghul"
+role.save
 
-# movie = Movie.find_by(title: "The Dark Knight")
-# actor = Actor.find_by(name: "Christian Bale")
-# role = Role.new
-# role.movie_id = movie.id
-# role.actor_id = actor.id
-# role["character_name"] = "Bruce Wayne"
-# role.save
+#Query to find the actor Katie Holmes
+kh = Actor.find_by({"name" => "Katie Holmes"})
 
-# movie = Movie.find_by(title: "The Dark Knight")
-# actor = Actor.find_by(name: "Heath Ledger")
-# role = Role.new
-# role.movie_id = movie.id
-# role.actor_id = actor.id
-# role["character_name"] = "Joker"
-# role.save
+role = Role.new
+role["movie_id"] = bb["id"]
+role["actor_id"] = kh["id"]
+role["character_name"] = "Rachel Dawes"
+role.save
 
-# movie = Movie.find_by(title: "The Dark Knight")
-# actor = Actor.find_by(name: "Aaron Eckhart")
-# role = Role.new
-# role.movie_id = movie.id
-# role.actor_id = actor.id
-# role["character_name"] = "Harvey Dent"
-# role.save
+#Query to find the actor Gary Oldman
+go = Actor.find_by({"name" => "Gary Oldman"})
 
-# movie = Movie.find_by(title: "The Dark Knight")
-# actor = Actor.find_by(name: "Michael Caine")
-# role = Role.new
-# role.movie_id = movie.id
-# role.actor_id = actor.id
-# role["character_name"] = "Alfred"
-# role.save
+role = Role.new
+role["movie_id"] = bb["id"]
+role["actor_id"] = go["id"]
+role["character_name"] = "Commissioner Gordon"
+role.save
 
-# movie = Movie.find_by(title: "The Dark Knight")
-# actor = Actor.find_by(name: "Maggie Gyllenhaal")
-# role = Role.new
-# role.movie_id = movie.id
-# role.actor_id = actor.id
-# role["character_name"] = "Rachel Dawes"
-# role.save
+# Query to find the Dark Knight movie
+dk = Movie.find_by({"title" => "The Dark Knight"})
 
-# movie = Movie.find_by(title: "The Dark Knight Rises")
-# actor = Actor.find_by(name: "Christian Bale")
-# role = Role.new
-# role.movie_id = movie.id
-# role.actor_id = actor.id
-# role["character_name"] = "Bruce Wayne"
-# role.save
+role = Role.new
+role["movie_id"] = dk["id"]
+role["actor_id"] = cb["id"]
+role["character_name"] = "Bruce Wayne"
+role.save
 
-# movie = Movie.find_by(title: "The Dark Knight Rises")
-# actor = Actor.find_by(name: "Gary Oldman")
-# role = Role.new
-# role.movie_id = movie.id
-# role.actor_id = actor.id
-# role["character_name"] = "Commissioner Gordon"
-# role.save
+#Query to find the actor Heath Ledger
+hl = Actor.find_by({"name" => "Heath Ledger"})
 
-# movie = Movie.find_by(title: "The Dark Knight Rises")
-# actor = Actor.find_by(name: "Tom Hardy")
-# role = Role.new
-# role.movie_id = movie.id
-# role.actor_id = actor.id
-# role["character_name"] = "Bane"
-# role.save
+role = Role.new
+role["movie_id"] = dk["id"]
+role["actor_id"] = hl["id"]
+role["character_name"] = "Joker"
+role.save
 
-# movie = Movie.find_by(title: "The Dark Knight Rises")
-# actor = Actor.find_by(name: "Joseph Gordon-Levitt")
-# role = Role.new
-# role.movie_id = movie.id
-# role.actor_id = actor.id
-# role["character_name"] = "John Blake"
-# role.save
+#Query to find the actor Aaron Eckhart
+ae = Actor.find_by({"name" => "Aaron Eckhart"})
 
-# movie = Movie.find_by(title: "The Dark Knight Rises")
-# actor = Actor.find_by(name: "Anne Hathaway")
-# role = Role.new
-# role.movie_id = movie.id
-# role.actor_id = actor.id
-# role["character_name"] = "Selina Kyle"
-# role.save
+role = Role.new
+role["movie_id"] = dk["id"]
+role["actor_id"] = ae["id"]
+role["character_name"] = "Harvey Dent"
+role.save
 
-# # Prints a header for the movies output
-# puts "Movies"
-# puts "======"
-# puts ""
+role = Role.new
+role["movie_id"] = dk["id"]
+role["actor_id"] = mc["id"]
+role["character_name"] = "Alfred"
+role.save
 
-# # Query the movies data and loop through the results to display the movies output.
-# for movie in Movie.all
-#     title = movie["title"].ljust(25)
-#     year_released = movie["year_released"].to_s.ljust(8)
-#     rated = movie["rated"].ljust(8)
-#     studio = Studio.find(movie.studio_id).name.ljust(15)
-#     puts "#{title}#{year_released}#{rated}#{studio}"
-# end
+#Query to find the actor Maggie Gyllenhaal
+mg = Actor.find_by({"name" => "Maggie Gyllenhaal"})
 
-# # Prints a header for the cast output
-# puts ""
-# puts "Top Cast"
-# puts "========"
-# puts ""
+role = Role.new
+role["movie_id"] = dk["id"]
+role["actor_id"] = mg["id"]
+role["character_name"] = "Rachel Dawes"
+role.save
 
-# # Query the cast data and loop through the results to display the cast output for each movie.
-# for role in Role.all
-#     movie = Movie.find(role.movie_id).title.ljust(25)
-#     actor = Actor.find(role.actor_id).name.ljust(25)
-#     character_name = role["character_name"].ljust(25)
-#     puts "#{movie}#{actor}#{character_name}"
-# end
+# Query to find the Dark Knight Rises movie
+dkr = Movie.find_by({"title" => "The Dark Knight Rises"})
+
+role = Role.new
+role["movie_id"] = dkr["id"]
+role["actor_id"] = cb["id"]
+role["character_name"] = "Bruce Wayne"
+role.save
+
+role = Role.new
+role["movie_id"] = dkr["id"]
+role["actor_id"] = go["id"]
+role["character_name"] = "Commissioner Gordon"
+role.save
+
+#Query to find the actor Tom Hardy
+th = Actor.find_by({"name" => "Tom Hardy"})
+
+role = Role.new
+role["movie_id"] = dkr["id"]
+role["actor_id"] = th["id"]
+role["character_name"] = "Bane"
+role.save
+
+#Query to find the actor Joseph Gordon-Levitt
+jgl = Actor.find_by({"name" => "Joseph Gordon-Levitt"})
+
+role = Role.new
+role["movie_id"] = dkr["id"]
+role["actor_id"] = jgl["id"]
+role["character_name"] = "John Blake"
+role.save
+
+#Query to find the actor Anne Hathaway
+ah = Actor.find_by({"name" => "Anne Hathaway"})
+
+role = Role.new
+role["movie_id"] = dkr["id"]
+role["actor_id"] = ah["id"]
+role["character_name"] = "Selina Kyle"
+role.save
+
+# Prints a header for the movies output
+puts "Movies"
+puts "======"
+puts ""
+
+# Query the movies data and loop through the results to display the movies output.
+movies = Movie.all
+
+for movie in movies
+    # Read the movie, year released, and rating from the movie row and add them to a precisely lengthed string
+    title = movie["title"].ljust(25)
+    year_released = movie["year_released"].to_s.ljust(8)
+    rated = movie["rated"].ljust(8)
+
+    # Find the name of the studio associated with the movie
+    studio = Studio.find_by({"id" => movie["studio_id"]})
+
+    # Read the studio name to a precisely lengthed string
+    studio_name = studio["name"].ljust(15)
+    
+    # Display the combined strings into a row
+    puts "#{title}#{year_released}#{rated}#{studio_name}"
+end
+
+# Prints a header for the cast output
+puts ""
+puts "Top Cast"
+puts "========"
+puts ""
+
+# Query the cast data and loop through the results to display the cast output for each movie.
+roles = Role.all
+
+for role in roles
+    # Find the name of the movie associated with the role
+    movie = Movie.find_by({"id" => role["movie_id"]})
+
+    # Read the title of the movie to a precisely lengthed string
+    movie_title = movie["title"].ljust(25)
+
+    # Find the name of the actor associated with the role
+    actor = Actor.find_by({"id" => role["actor_id"]})
+
+    # Read the name of the actor to a precisely lengthed string
+    actor_name = actor["name"].ljust(25)
+
+    # Read the name of the character 
+    character_name = role["character_name"].ljust(25)
+    
+    # Display the combined strings into a row
+    puts "#{movie_title}#{actor_name}#{character_name}"
+end
